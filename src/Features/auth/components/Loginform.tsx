@@ -13,6 +13,7 @@ import { settoken } from "@/Features/server/cookies";
 import { authactions } from "../store/auth.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { appstate } from "@/store/store";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Loginform() {
@@ -46,7 +47,7 @@ export default function Loginform() {
        }else{
         if(response?.errors){
             Object.keys(response.errors).forEach((key)=>{
-                setError(key as keyof loginvaluestype,{message:response?.errors[key]})
+                setError(key as keyof loginvaluestype, { message: (response?.errors as Record<string, string>)[key] })
             })
         }
        }
@@ -65,8 +66,8 @@ export default function Loginform() {
        <h1 className="font-bold text-4xl">Welcome Back!</h1>
         <p>Sign in to continue your fresh shopping experience</p></div>
         <div className="buttons space-y-4">
-            <button className="form-control space-x-3 text-xl hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-full py-3"><FontAwesomeIcon icon={faGoogle} className="text-red-400" /><span>Continue With Google</span></button>
-            <button className="form-control space-x-3 text-xl hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-full py-3"><FontAwesomeIcon icon={faFacebook} className="text-blue-500" /><span>Continue With Facebook</span></button>
+            <button className="form-control space-x-3 text-xl hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-full py-3"><FontAwesomeIcon icon={faGoogle as IconProp} className="text-red-400" /><span>Continue With Google</span></button>
+            <button className="form-control space-x-3 text-xl hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-full py-3"><FontAwesomeIcon icon={faFacebook as IconProp} className="text-blue-500" /><span>Continue With Facebook</span></button>
         </div>
         <div className="divider  before:w-40 before:h-1 before:bg-gray-500/10 before:absolute relative before:right-2 before:top-1/2 before:-translate-y-1/2 after:h-1 after:bg-gray-500/10 after:absolute after:w-40   after:left-2 after:top-1/2 after:-translate-y-1/2">
             <span className="">OR CONTINUE WITH EMAIL</span>
@@ -90,7 +91,7 @@ export default function Loginform() {
                 {...register('email')}
                 
                 />
-                 <FontAwesomeIcon icon={faEnvelope} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"/>
+                 <FontAwesomeIcon icon={faEnvelope as IconProp} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"/>
 
                 </div>
                
@@ -110,7 +111,7 @@ export default function Loginform() {
                 {...register('password')}
                 
                 />
-                <FontAwesomeIcon icon={faLock} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"/>
+                <FontAwesomeIcon icon={faLock as IconProp} className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400"/>
                 </div>
                 {errors.password?<p className="text-red-500">{errors.password.message}</p>:''}
                 
@@ -133,7 +134,7 @@ export default function Loginform() {
          {isSubmitting?<>
         
          <span>Signing in</span>
-          <FontAwesomeIcon icon={faSpinner} spin />
+          <FontAwesomeIcon icon={faSpinner as IconProp} spin />
          </>:<>Sign in</>}
             
             

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import logo from '../../../assets/images/freshcart-logo.svg'
 import Link from "next/link";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
                 <div className="">
                     <div className="flex items-center gap-x-2">
                         <div className="icon w-9 h-9 rounded-lg bg-green-300/40 flex items-center justify-center">
-                            <FontAwesomeIcon icon={faTruck} className="text-green-600" />
+                            <FontAwesomeIcon icon={faTruck as IconProp} className="text-green-600" />
                         </div>
                         <div className="text">
                             <h4>Free Shipping</h4>
@@ -25,7 +26,7 @@ export default function Footer() {
                 <div className="">
                     <div className="flex items-center gap-x-2">
                         <div className="icon w-9 h-9 rounded-lg bg-green-300/40 flex items-center justify-center">
-                            <FontAwesomeIcon icon={faArrowRotateLeft} className="text-green-600" />
+                            <FontAwesomeIcon icon={faArrowRotateLeft as IconProp} className="text-green-600" />
                         </div>
                         <div className="text">
                             <h4>Easy Returns</h4>
@@ -37,7 +38,7 @@ export default function Footer() {
                 <div className="">
                     <div className="flex items-center gap-x-2">
                         <div className="icon w-9 h-9 rounded-lg bg-green-300/40 flex items-center justify-center">
-                            <FontAwesomeIcon icon={faShieldHalved} className="text-green-600" />
+                            <FontAwesomeIcon icon={faShieldHalved as IconProp} className="text-green-600" />
                         </div>
                         <div className="text">
                             <h4>Secure Payment</h4>
@@ -49,7 +50,7 @@ export default function Footer() {
                 <div className="">
                     <div className="flex items-center gap-x-2">
                         <div className="icon w-9 h-9 rounded-lg bg-green-300/40 flex items-center justify-center">
-                            <FontAwesomeIcon icon={faHeadset} className="text-green-600" />
+                            <FontAwesomeIcon icon={faHeadset as IconProp} className="text-green-600" />
                         </div>
                         <div className="text">
                             <h4>24/7 Support</h4>
@@ -67,25 +68,25 @@ export default function Footer() {
                         </div>
                         <p className="text-gray-400">FreshCart is your one-stop destination for quality products. From fashion to electronics, we bring you the best brands at competitive prices with a seamless shopping experience.</p>
                         <ul className="space-y-3">
-                            <li><a href="tel:+1 (800) 123-4567" className='flex  items-center gap-x-3  duration-200'><FontAwesomeIcon icon={faPhone} className='w-5 text-green-600' /><span className="text-gray-400 hover:text-green-600 transition-colors duration-200">+1 (800) 123-4567</span></a></li>
-                            <li className=' border-gray-200 hover:text-green-400 transition-colors duration-200'><a href="mailto:support@freshcart.com" className='flex items-center gap-x-3'><FontAwesomeIcon icon={faEnvelope} className='w-5 text-green-600' /> <span className="text-gray-400 hover:text-green-600 transition-colors duration-200">support@freshcart.com</span></a></li>
-                            <li className="flex items-center gap-x-3"><FontAwesomeIcon icon={faLocationDot} className="text-green-600" />
+                            <li><a href="tel:+1 (800) 123-4567" className='flex  items-center gap-x-3  duration-200'><FontAwesomeIcon icon={faPhone as IconProp} className='w-5 text-green-600' /><span className="text-gray-400 hover:text-green-600 transition-colors duration-200">+1 (800) 123-4567</span></a></li>
+                            <li className=' border-gray-200 hover:text-green-400 transition-colors duration-200'><a href="mailto:support@freshcart.com" className='flex items-center gap-x-3'><FontAwesomeIcon icon={faEnvelope as IconProp} className='w-5 text-green-600' /> <span className="text-gray-400 hover:text-green-600 transition-colors duration-200">support@freshcart.com</span></a></li>
+                            <li className="flex items-center gap-x-3"><FontAwesomeIcon icon={faLocationDot as IconProp} className="text-green-600" />
                             <p className="text-gray-400">123 Commerce Street, New York, NY 10001</p>
                             
                             </li>
                         </ul>
                         <ul className="flex items-center gap-x-3">
                             <div className="w-9 h-9 flex items-center justify-center rounded-full bg-secondary2">
-                                <FontAwesomeIcon icon={faFacebookF} className="text-gray-400" />
+                                <FontAwesomeIcon icon={faFacebookF as IconProp} className="text-gray-400" />
                             </div>
                              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-secondary2">
-                                <FontAwesomeIcon icon={faTwitter} className="text-gray-400" />
+                                <FontAwesomeIcon icon={faTwitter as IconProp} className="text-gray-400" />
                             </div>
                              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-secondary2">
-                                <FontAwesomeIcon icon={faInstagram} className="text-gray-400" />
+                                <FontAwesomeIcon icon={faInstagram as IconProp} className="text-gray-400" />
                             </div>
                              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-secondary2">
-                                <FontAwesomeIcon icon={faYoutube} className="text-gray-400" />
+                                <FontAwesomeIcon icon={faYoutube as IconProp} className="text-gray-400" />
                             </div>
                         </ul>
 

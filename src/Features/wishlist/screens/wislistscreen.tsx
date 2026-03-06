@@ -6,6 +6,7 @@ import { getwishlist } from "../server/wishlist.server";
 import WishlistCard from "../component/wishlist card";
 import { useSelector } from "react-redux";
 import { appstate } from "@/store/store";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default  function WishlistPage() {
@@ -28,7 +29,7 @@ export default  function WishlistPage() {
         
         <div className="flex items-center gap-4 mb-10">
           <div className="w-14 h-14 rounded-2xl bg-red-100 flex items-center justify-center">
-            <FontAwesomeIcon icon={faHeart} className="text-red-500 text-xl" />
+            <FontAwesomeIcon icon={faHeart as IconProp} className="text-red-500 text-xl" />
           </div>
 
           <div>

@@ -12,6 +12,7 @@ import { appstate } from '@/store/store';
 import { useEffect } from 'react';
 import { Addproduct, getcartproducts } from '@/Features/cart/server/addproductserver';
 import { cartsliceactions } from '@/Features/cart/store/cartslice';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export default function WishlistCard({info}:{info:Product}) {
  
@@ -111,12 +112,12 @@ export default function WishlistCard({info}:{info:Product}) {
       
       <div className="col-span-3 flex items-center justify-center gap-4">
         <button onClick={handleaddproduct} className=" cursor-pointer   bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium shadow-sm transition">
-          <FontAwesomeIcon icon={faCartShopping} />
+          <FontAwesomeIcon icon={faCartShopping as IconProp} />
          <span> Add to Cart</span>
         </button>
 
         <button onClick={handleremove} className=" cursor-pointer w-11 h-11 group rounded-xl border border-gray-200 flex items-center justify-center hover:bg-red-200/20 hover:border-red-200 transition">
-          <FontAwesomeIcon icon={faTrash} className="text-gray-500 group-hover:text-red-500" />
+          <FontAwesomeIcon icon={faTrash as IconProp} className="text-gray-500 group-hover:text-red-500" />
         </button>
       </div>
     </div>

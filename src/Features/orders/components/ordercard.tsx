@@ -1,6 +1,7 @@
 import { faBox, faCalendar, faCheck, faCircleCheck, faClock, faLocationDot, faReceipt, faTruck, faTruckFast } from "@fortawesome/free-solid-svg-icons";
 import { Order } from "../types/orderstypes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Ordercard({order}:{order:Order}) {
@@ -61,7 +62,7 @@ export default function Ordercard({order}:{order:Order}) {
 
                 <div className="space-y-2">
                   <span className={`inline-flex items-center gap-2 ${status.colors.bg} ${status.colors.text} text-xs px-3 py-1 rounded-full font-medium`}>
-                    <FontAwesomeIcon icon={status.icon} className={`${status.colors.text}`} />
+                    <FontAwesomeIcon icon={status.icon as IconProp} className={`${status.colors.text}`} />
                     {status.label}
                   </span>
 
@@ -71,16 +72,16 @@ export default function Ordercard({order}:{order:Order}) {
 
                   <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                     <span className="flex items-center gap-1">
-                      <FontAwesomeIcon icon={faCalendar} />
+                      <FontAwesomeIcon icon={faCalendar as IconProp} />
                       {new Date(order.createdAt).toLocaleDateString()}
                     </span>
 
                     <span className="flex items-center gap-1">
-                      <FontAwesomeIcon icon={faBox} />
+                      <FontAwesomeIcon icon={faBox as IconProp} />
                       {itemscount} {itemscount===1?'item':'items'}
                     </span>
                     <span className="flex items-center gap-1">
-                      <FontAwesomeIcon icon={faLocationDot} />
+                      <FontAwesomeIcon icon={faLocationDot as IconProp} />
                       {order.shippingAddress?.city?order.shippingAddress.city:'unknown city'}
                     </span>
                   </div>
@@ -139,7 +140,7 @@ export default function Ordercard({order}:{order:Order}) {
              <div className="flex items-center justify-between *:grow gap-x-10">
                  <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 shadow-sm h-fit">
                 <h4 className="font-semibold mb-4 flex items-center gap-2 text-blue-700">
-                  <FontAwesomeIcon icon={faReceipt} />
+                  <FontAwesomeIcon icon={faReceipt as IconProp} />
                   Order Summary
                 </h4>
 
@@ -162,7 +163,7 @@ export default function Ordercard({order}:{order:Order}) {
               </div>
                <div className="bg-blue-50 border  border-blue-100 rounded-2xl p-6 shadow-sm h-fit">
                 <h4 className="font-semibold mb-4 flex items-center gap-2 text-blue-700">
-                  <FontAwesomeIcon icon={faReceipt} />
+                  <FontAwesomeIcon icon={faReceipt as IconProp} />
                   DeliveryAddress
                 </h4>
 

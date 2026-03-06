@@ -1,5 +1,6 @@
 import Productscard from "@/Features/Products/components/Productscard";
 import { getproducts } from "@/Features/Products/server/products.server";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faBoxOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,7 +13,7 @@ export default async function Shopscreen(){
         <div className="header bg-green-600 p-10 ">
             <div className="flex items-center gap-x-2">
                 <div className="icon shadow-xl rounded-xl flex items-center justify-center w-16 h-16 bg-green-300/40 text-white ">
-                <FontAwesomeIcon icon={faBoxOpen} className="text-2xl" />
+                <FontAwesomeIcon icon={faBoxOpen as IconProp} className="text-2xl" />
 
             </div>
             <div className="text text-white">

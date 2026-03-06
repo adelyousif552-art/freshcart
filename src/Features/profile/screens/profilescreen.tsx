@@ -10,6 +10,7 @@ import addaddress, { getalladdresses, removeaddress, updatepassword, updateprofi
 import { toast } from "react-toastify";
 import { Address, AddressResponse } from "../types/addresstype";
 import AddressCard from "../components/addresscard";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function Profilescreen() {
   const updatepasswordform=useForm<updatepasstype>({
@@ -121,7 +122,7 @@ const response=await getalladdresses()
   <section>
     <div className="header  bg-green-600 py-8 px-2 flex items-center gap-x-4 ">
         <div className="icon w-12 h-12 rounded-2xl shadow-2xl bg-green-400/40 flex items-center justify-center">
-            <FontAwesomeIcon icon={faUser} className="text-white text-2xl"/>
+            <FontAwesomeIcon icon={faUser as IconProp} className="text-white text-2xl"/>
 
         </div>
         <div className="text">
@@ -139,13 +140,13 @@ const response=await getalladdresses()
            }} className={`flex items-center ${settingisopened?'':'bg-green-200 text-green-600'} p-4 rounded-2xl justify-between`}>
             <div className="flex items-center gap-x-4">
                  <div className={`icon  w-12 h-12 rounded-2xl ${settingisopened?' bg-gray-600/20':' bg-green-400'} flex items-center justify-center`}>
-                <FontAwesomeIcon icon={faLocationDot} className={`${settingisopened?'text-gray-400':'text-white'}`}/>
+                <FontAwesomeIcon icon={faLocationDot as IconProp} className={`${settingisopened?'text-gray-400':'text-white'}`}/>
                 
             </div>
            
                 <h1>My Addresses</h1>
             </div>
-                <FontAwesomeIcon icon={faArrowRight} className={`text-sm ${settingisopened?'text-gray-500':'text-green-600'}`}/>
+                <FontAwesomeIcon icon={faArrowRight as IconProp} className={`text-sm ${settingisopened?'text-gray-500':'text-green-600'}`}/>
             
            </div>
 
@@ -155,12 +156,12 @@ const response=await getalladdresses()
         }} className={`flex p-4 rounded-2xl ${settingisopened?'bg-green-200 text-green-600':''}  items-center justify-between  `}>
              <div className="flex items-center gap-x-4 ">
                 <div className={`icon  w-12 h-12 rounded-2xl flex ${settingisopened?'bg-green-400 text-white':' bg-gray-600/20'} items-center justify-center `}>
-                <FontAwesomeIcon icon={faGear} className={`${settingisopened?'text-white':'text-gray-400'}`}/>
+                <FontAwesomeIcon icon={faGear as IconProp} className={`${settingisopened?'text-white':'text-gray-400'}`}/>
                 
             </div>
             <h1>Settings</h1>
              </div>
-             <FontAwesomeIcon icon={faArrowRight} className={`text-sm ${settingisopened?'text-green-600':'text-gray-500'} `}/>
+             <FontAwesomeIcon icon={faArrowRight as IconProp} className={`text-sm ${settingisopened?'text-green-600':'text-gray-500'} `}/>
            </div>
 
         </div>
@@ -179,7 +180,7 @@ const response=await getalladdresses()
                     <button onClick={()=>{
                         setaddaddressopened(true)
                     }}  className="flex cursor-pointer items-center gap-2 bg-green-600 hover:bg-green-700 transition text-white px-5 py-3 rounded-xl shadow-md">
-                      <FontAwesomeIcon icon={faPlus} />
+                      <FontAwesomeIcon icon={faPlus as IconProp} />
                       Add Address
                     </button>
                   </div>
@@ -189,7 +190,7 @@ const response=await getalladdresses()
                  }) : <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 flex flex-col items-center justify-center text-center min-h-[400px]">
                     <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center mb-6">
                       <FontAwesomeIcon
-                        icon={faLocationDot}
+                        icon={faLocationDot as IconProp}
                         className="text-gray-400 text-3xl"
                       />
                     </div>
@@ -206,7 +207,7 @@ const response=await getalladdresses()
                     <button onClick={()=>{
                         setaddaddressopened(true)
                     }} className="flex cursor-pointer items-center gap-2 bg-green-600 hover:bg-green-700 transition text-white px-6 py-3 rounded-xl shadow-lg">
-                      <FontAwesomeIcon icon={faPlus} />
+                      <FontAwesomeIcon icon={faPlus as IconProp} />
                       Add Your First Address
                     </button>
                   </div>}
@@ -217,7 +218,7 @@ const response=await getalladdresses()
         <div className="bg-white rounded-2xl shadow-sm border border-gray-400/20 p-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-              <FontAwesomeIcon icon={faUser} className="text-green-600 text-lg" />
+              <FontAwesomeIcon icon={faUser as IconProp} className="text-green-600 text-lg" />
             </div>
             <div>
               <h2 className="text-lg font-semibold text-gray-800">Profile Information</h2>
@@ -260,7 +261,7 @@ const response=await getalladdresses()
               type="submit"
               className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow-md transition"
             >
-              <FontAwesomeIcon icon={faSave} />
+              <FontAwesomeIcon icon={faSave as IconProp} />
               Save Changes
             </button>
           </form>
@@ -283,7 +284,7 @@ const response=await getalladdresses()
         <div className="bg-white rounded-2xl shadow-sm border border-gray-400/20 p-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
-              <FontAwesomeIcon icon={faLock} className="text-orange-500 text-lg" />
+              <FontAwesomeIcon icon={faLock as IconProp} className="text-orange-500 text-lg" />
             </div>
             <div>
               <h2 className="text-lg font-semibold text-gray-800">Change Password</h2>
@@ -333,7 +334,7 @@ const response=await getalladdresses()
               type="submit"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl shadow-md transition"
             >
-              <FontAwesomeIcon icon={faKey} />
+              <FontAwesomeIcon icon={faKey as IconProp} />
               Change Password
             </button>
           </form>

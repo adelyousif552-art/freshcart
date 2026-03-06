@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Brand } from "../types/brandtypes";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Brandcard({info}:{info:Brand}) {
@@ -19,7 +20,7 @@ export default function Brandcard({info}:{info:Brand}) {
         </div>
         <h1 className="group-hover:text-violet-600 font-bold">{info.name}</h1>
         <Link className="text-white text-sm group-hover:text-violet-600 transition-all duration-200" href={'/subcategories'}>
-        <span>view Subcategories </span> <FontAwesomeIcon icon={faArrowRight}/>
+        <span>view Subcategories </span> <FontAwesomeIcon icon={faArrowRight as IconProp}/>
         </Link>
 
     </div>

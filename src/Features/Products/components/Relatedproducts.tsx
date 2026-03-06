@@ -10,6 +10,7 @@ import 'swiper/css/navigation'
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 
@@ -33,10 +34,10 @@ export default  function Relatedproducts({productcat}:{productcat:Product}) {
     </div>
     <div className="flex items-center gap-x-3">
         <div className=" previous icon cursor-pointer w-9 h-9 bg-gray-400/20 rounded-full flex items-center justify-center">
-            <FontAwesomeIcon icon={faArrowLeft}/>
+            <FontAwesomeIcon icon={faArrowLeft as IconProp}/>
         </div>
          <div className=" next icon w-9 h-9 cursor-pointer bg-gray-400/20 rounded-full flex items-center justify-center">
-            <FontAwesomeIcon icon={faArrowRight}/>
+            <FontAwesomeIcon icon={faArrowRight as IconProp}/>
         </div>
     </div>
    </div>

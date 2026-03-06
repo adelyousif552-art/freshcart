@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { addressschema, addressvalidate } from "../schema/addressschema";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default  function AddressCard({info,addressfun}:{info:Address,addressfun:any}) {
  async function deleteaddr(id:string){
@@ -30,7 +31,7 @@ export default  function AddressCard({info,addressfun}:{info:Address,addressfun:
 
       <div className="flex gap-4">
         <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center">
-          <FontAwesomeIcon icon={faLocationDot} className="text-green-600 text-xl" />
+          <FontAwesomeIcon icon={faLocationDot as IconProp} className="text-green-600 text-xl" />
         </div>
 
         <div className="space-y-2">
@@ -44,12 +45,12 @@ export default  function AddressCard({info,addressfun}:{info:Address,addressfun:
 
           <div className="flex flex-wrap items-center gap-6 text-gray-600 text-sm pt-1">
             <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faPhone} className="text-gray-400" />
+              <FontAwesomeIcon icon={faPhone as IconProp} className="text-gray-400" />
               <span>{info.phone}</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faCity} className="text-gray-400" />
+              <FontAwesomeIcon icon={faCity as IconProp} className="text-gray-400" />
               <span>{info.city}</span>
             </div>
           </div>
@@ -58,14 +59,14 @@ export default  function AddressCard({info,addressfun}:{info:Address,addressfun:
 
       <div className="flex gap-3">
         <button  className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition">
-          <FontAwesomeIcon icon={faPen} className="text-gray-600 text-sm" />
+          <FontAwesomeIcon icon={faPen as IconProp} className="text-gray-600 text-sm" />
         </button>
 
         <button onClick={()=>{
             deleteaddr(info._id)
             
         }} type="button" className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-red-100 flex items-center justify-center transition">
-          <FontAwesomeIcon icon={faTrash} className="text-gray-600 hover:text-red-600 text-sm" />
+          <FontAwesomeIcon icon={faTrash as IconProp} className="text-gray-600 hover:text-red-600 text-sm" />
         </button>
       </div>
 

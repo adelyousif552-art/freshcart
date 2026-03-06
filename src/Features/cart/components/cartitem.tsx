@@ -7,6 +7,7 @@ import { deleteproduct, updateproduct } from "../server/addproductserver";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { cartsliceactions } from "../store/cartslice";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Cartitem({product}:{product:CartProduct}) {
@@ -68,7 +69,7 @@ export default function Cartitem({product}:{product:CartProduct}) {
         <Image src={product.product.imageCover} alt={product.product.title}width={100} height={100}/>
     </div>
     <div className="bg-green-600 w-fit rounded-full px-2 ml-auto ">
-        <p className="text-white text-sm"><FontAwesomeIcon icon={faCheck}/><span>in stock</span></p>
+        <p className="text-white text-sm"><FontAwesomeIcon icon={faCheck as IconProp}/><span>in stock</span></p>
 
     </div>
     </div>
@@ -87,11 +88,11 @@ export default function Cartitem({product}:{product:CartProduct}) {
         <div className="rounded-2xl flex  items-center justify-between bg-gray-400/10 p-1 space-x-3 ">
        <button onClick={()=>{
         handleupdate(product.count-1)
-       }} className={` ${product.count==1?'cursor-not-allowed text-gray-500/40':'cursor-pointer'} bg-white py-2 px-3 shadow-lg rounded-xl`}><FontAwesomeIcon icon={faMinus}/></button>
+       }} className={` ${product.count==1?'cursor-not-allowed text-gray-500/40':'cursor-pointer'} bg-white py-2 px-3 shadow-lg rounded-xl`}><FontAwesomeIcon icon={faMinus as IconProp}/></button>
        <span>{product.count}</span>
        <button disabled={product.count>product.product.quantity}  onClick={()=>{
         handleupdate(product.count+1)
-       }} className="cursor-pointer bg-green-600 text-white py-2 px-3 shadow-lg rounded-xl hover:bg-green-800 transition-colors duration-200"><FontAwesomeIcon icon={faPlus}/></button>
+       }} className="cursor-pointer bg-green-600 text-white py-2 px-3 shadow-lg rounded-xl hover:bg-green-800 transition-colors duration-200"><FontAwesomeIcon icon={faPlus as IconProp}/></button>
 
        </div>
        
@@ -109,7 +110,7 @@ export default function Cartitem({product}:{product:CartProduct}) {
         </div>
          </div>
         <div className="button">
-            <button onClick={handleremove} className="p-2 cursor-pointer hover:bg-red-600 hover:text-white transition-colors duration-200 rounded-lg bg-red-200/30 text-red-500"><FontAwesomeIcon icon={faTrash} className="" /></button>
+            <button onClick={handleremove} className="p-2 cursor-pointer hover:bg-red-600 hover:text-white transition-colors duration-200 rounded-lg bg-red-200/30 text-red-500"><FontAwesomeIcon icon={faTrash as IconProp} className="" /></button>
         </div>
        </div>
     </div>

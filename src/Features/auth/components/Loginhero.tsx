@@ -2,6 +2,7 @@ import Image from "next/image";
 import image from '../../../assets/images/2e5810ff3e-e750761ebcd4ae5907db.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faShieldHalved, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Loginhero() {
@@ -16,15 +17,15 @@ export default function Loginhero() {
   </div>
   <ul className="flex items-center gap-x-5 justify-center *:space-x-2">
     <li>
-        <FontAwesomeIcon icon={faTruck} className="text-green-600" />
+        <FontAwesomeIcon icon={faTruck as IconProp} className="text-green-600" />
         <span>Free Delivery</span>
     </li>
      <li>
-        <FontAwesomeIcon icon={faShieldHalved} className="text-green-600" />
+        <FontAwesomeIcon icon={faShieldHalved as IconProp} className="text-green-600" />
         <span>Secure Payment</span>
     </li>
      <li>
-        <FontAwesomeIcon icon={faClock} className="text-green-600" />
+        <FontAwesomeIcon icon={faClock as IconProp} className="text-green-600" />
         <span>24/7 Support</span>
     </li>
   </ul>

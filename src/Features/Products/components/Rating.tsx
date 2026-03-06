@@ -1,3 +1,4 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import {  faStar as regularstar } from "@fortawesome/free-regular-svg-icons"
 import { faStarHalfStroke, faStar as solidstar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -20,7 +21,7 @@ export default function Rating({rating}:{rating:number}):ReactNode {
   <div className="stars text-yellow-400">
   
 {[1,2,3,4,5].map((pos,index)=>{
-    return <FontAwesomeIcon key={index} icon={getposition(pos)}/>
+    return <FontAwesomeIcon key={index} icon={getposition(pos) as IconProp}/>
 })}
 
 

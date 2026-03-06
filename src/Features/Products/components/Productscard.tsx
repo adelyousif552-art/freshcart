@@ -14,6 +14,7 @@ import { cartsliceactions } from "@/Features/cart/store/cartslice";
 import { addtowishlist } from "@/Features/wishlist/server/wishlist.server";
 import { useEffect, useState } from "react";
 import { wishsliceactions } from "@/Features/wishlist/store/wishlist.slice";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Productscard({info}:{info:Product}) {
@@ -65,12 +66,12 @@ export default function Productscard({info}:{info:Product}) {
         <Image src={imageCover} width={100} height={100} alt="clothes" className="w-full h-60 object-cover "/>
         <div className="icons absolute top-2 right-2 space-y-4 ">
             <div onClick={addwishlist}>
-                <FontAwesomeIcon icon={faHeart} className="hover:text-red-500 transition-colors duration-200 cursor-pointer" />
+                <FontAwesomeIcon icon={faHeart as IconProp} className="hover:text-red-500 transition-colors duration-200 cursor-pointer" />
             </div>
             <div>
-                <FontAwesomeIcon icon={faArrowsRotate} className="hover:text-green-500 transition-colors duration-200 cursor-pointer" />
+                <FontAwesomeIcon icon={faArrowsRotate as IconProp} className="hover:text-green-500 transition-colors duration-200 cursor-pointer" />
             </div>
-            <div><Link href={`/productdetails/${id}`}><FontAwesomeIcon icon={faEye} className="hover:text-green-500 transition-colors duration-200 cursor-pointer" /></Link></div>
+            <div><Link href={`/productdetails/${id}`}><FontAwesomeIcon icon={faEye as IconProp} className="hover:text-green-500 transition-colors duration-200 cursor-pointer" /></Link></div>
 
         </div>
         {onsale?<div className="badge w-12 rounded h-5 text-center bg-red-500 text-white absolute top-2 left-2">
@@ -93,7 +94,7 @@ export default function Productscard({info}:{info:Product}) {
             <span className="line-through">{price} EGP</span>
         </div>:<h1 className="font-bold text-lg">{price} EGP</h1>}
         <div className="button w-10 h-10 rounded-full hover:bg-green-800 transition-colors duration-200  bg-green-600 flex items-center justify-center">
-            <button onClick={handleaddproduct} className="cursor-pointer"><FontAwesomeIcon icon={faPlus} className="text-white text-xl"/></button>
+            <button onClick={handleaddproduct} className="cursor-pointer"><FontAwesomeIcon icon={faPlus as IconProp} className="text-white text-xl"/></button>
         </div>
     </div>
   </div>

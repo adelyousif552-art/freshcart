@@ -3,6 +3,7 @@ import { Category } from "../types/categoriestypes";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Categorycard({info}:{info:Category}) {
@@ -15,7 +16,7 @@ export default function Categorycard({info}:{info:Category}) {
         </div>
         <h1 className="group-hover:text-green-600 font-bold">{info.name}</h1>
         <Link className="text-white text-sm group-hover:text-green-600 transition-all duration-200" href={'/subcategories'}>
-        <span>view Subcategories </span> <FontAwesomeIcon icon={faArrowRight}/>
+        <span>view Subcategories </span> <FontAwesomeIcon icon={faArrowRight as IconProp}/>
         </Link>
 
     </div>

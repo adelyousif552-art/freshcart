@@ -15,6 +15,7 @@ import { appstate } from "@/store/store"
 
 import React, { useEffect, useState } from "react"
 import { OrdersResponse } from "../types/orderstypes"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 
 export default function OrderSCREEN() {
     const { userinfo } = useSelector((state: appstate) => state.auth)
@@ -45,7 +46,7 @@ export default function OrderSCREEN() {
     return (<>
     <div className="header mx-10 flex items-center gap-x-3">
         <div className="icon w-12 h-12 rounded-xl bg-green-600 flex items-center justify-center">
-            <FontAwesomeIcon icon={faBox} className="text-white" />
+            <FontAwesomeIcon icon={faBox as IconProp} className="text-white" />
         </div>
         <div className="text">
             <h1 className="text-2xl font-bold">My Orders</h1>
