@@ -1,4 +1,4 @@
-import { clear } from 'console';
+
 import { CartProduct, CartResponse } from './../types/carttypes';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export interface cartstate{
