@@ -2,6 +2,7 @@ import { faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getallcategories } from "../server/categories.server";
 import Categorycard from "../components/categorycard";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default async function Categoryscreen(){
     const response=await getallcategories()
@@ -9,7 +10,7 @@ export default async function Categoryscreen(){
      <div className="header bg-green-600 p-10 ">
             <div className="flex items-center gap-x-4">
                 <div className="icon shadow-xl rounded-xl flex items-center justify-center w-20 h-20 bg-green-300/40 text-white ">
-                <FontAwesomeIcon icon={faLayerGroup} className="text-4xl" />
+                <FontAwesomeIcon icon={faLayerGroup as IconProp} className="text-4xl" />
 
             </div>
             <div className="text text-white">

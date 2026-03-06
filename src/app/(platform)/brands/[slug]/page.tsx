@@ -1,5 +1,6 @@
 
 import { getsinglebrand } from "@/Features/brand/server/brand.server"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import { faBoxOpen, faTags } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
@@ -25,7 +26,7 @@ export default async function page({params}:pageparams) {
     <div className="header bg-green-600 p-10 ">
                  <div className="flex items-center gap-x-4">
                      <div className="icon shadow-xl rounded-xl flex items-center overflow-hidden justify-center w-20 h-20 bg-green-300/40 text-white p-3 ">
-                     <FontAwesomeIcon icon={faTags} className="text-white text-4xl"/>
+                     <FontAwesomeIcon icon={faTags as IconProp} className="text-white text-4xl"/>
      
                  </div>
                  <div className="text text-white">
@@ -41,7 +42,7 @@ export default async function page({params}:pageparams) {
       
       <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center mb-6">
         <FontAwesomeIcon 
-          icon={faBoxOpen} 
+          icon={faBoxOpen as IconProp} 
           className="text-gray-400 text-3xl"
         />
       </div>

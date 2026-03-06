@@ -1,5 +1,6 @@
 
 
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import { faBoxOpen } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
@@ -32,7 +33,7 @@ export default async function page() {
       
       <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center mb-6">
         <FontAwesomeIcon 
-          icon={faBoxOpen} 
+          icon={faBoxOpen as IconProp} 
           className="text-gray-400 text-3xl"
         />
       </div>
