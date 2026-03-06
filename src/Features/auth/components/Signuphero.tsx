@@ -2,6 +2,7 @@ import { faShieldHalved, faStar, faTruckFast } from "@fortawesome/free-solid-svg
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import reviewimage from '../../../assets/images/review-author.png'
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 export default function Signuphero() {
@@ -14,7 +15,7 @@ export default function Signuphero() {
     <div className="icons space-y-5">
         <div className="flex items-center gap-x-3" >
             <div className="icon flex items-center justify-center w-9 h-9 bg-green-200/90 rounded-full">
-                <FontAwesomeIcon icon={faStar} className="text-green-600" />
+                <FontAwesomeIcon icon={faStar as IconProp} className="text-green-600" />
             </div>
             <div className="text">
                 <h1 className="font-bold">Premium Quality</h1>
@@ -24,7 +25,7 @@ export default function Signuphero() {
         </div>
          <div className="flex items-center gap-x-3" >
             <div className="icon flex items-center justify-center w-9 h-9 bg-green-200/90 rounded-full">
-                <FontAwesomeIcon icon={faTruckFast} className="text-green-600" />
+                <FontAwesomeIcon icon={faTruckFast as IconProp} className="text-green-600" />
             </div>
             <div className="text">
                 <h1 className="font-bold">Fast Delivery</h1>
@@ -34,7 +35,7 @@ export default function Signuphero() {
         </div>
          <div className="flex items-center gap-x-3" >
             <div className="icon flex items-center justify-center w-9 h-9 bg-green-200/90 rounded-full">
-                <FontAwesomeIcon icon={faShieldHalved} className="text-green-600" />
+                <FontAwesomeIcon icon={faShieldHalved as IconProp} className="text-green-600" />
             </div>
             <div className="text">
                 <h1 className="font-bold">Secure Shopping</h1>
@@ -51,7 +52,7 @@ export default function Signuphero() {
         </div>
         <div className="text">
             <h1>Sarah Johnson</h1>
-            {[...Array(5)].map((elm)=><FontAwesomeIcon icon={faStar} className="text-yellow-300 text-sm" />)}
+            {[...Array(5)].map((elm)=><FontAwesomeIcon icon={faStar as IconProp} className="text-yellow-300 text-sm" />)}
         </div>
         </div>
         <p>

@@ -11,6 +11,7 @@ import signupserver from "@/Features/server/Signup.serveraction";
 import { toast } from "react-toastify";
 
 import { useRouter } from "next/navigation";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 
 
@@ -51,7 +52,7 @@ export default function Signupform() {
                 Object.keys(response.errors).forEach((key)=>{
                     
                     
-                    setError(key as keyof signupvalidate,{message:response.errors[key]})
+                    setError(key as keyof signupvalidate, { message: (response.errors as Record<string, string>)[key] })
                 })
             }
         }
@@ -69,8 +70,8 @@ export default function Signupform() {
        <div> <h1 className="font-bold text-2xl">Create Your Account</h1>
         <p>Start your fresh journey with us today</p></div>
         <div className="buttons space-x-3">
-            <button className="form-control hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-60"><FontAwesomeIcon icon={faGoogle} className="text-red-400" /><span>Google</span></button>
-            <button className="form-control hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-60"><FontAwesomeIcon icon={faFacebook} className="text-blue-500" /><span>Facebook</span></button>
+            <button className="form-control hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-60"><FontAwesomeIcon icon={faGoogle as IconProp} className="text-red-400" /><span>Google</span></button>
+            <button className="form-control hover:bg-gray-200/40 cursor-pointer transition-colors duration-200 rounded-xl w-60"><FontAwesomeIcon icon={faFacebook as IconProp} className="text-blue-500" /><span>Facebook</span></button>
         </div>
         <div className="divider  before:w-70 before:h-1 before:bg-gray-500/10 before:absolute relative before:right-2 before:top-1/2 before:-translate-y-1/2 after:h-1 after:bg-gray-500/10 after:absolute after:w-70   after:left-2 after:top-1/2 after:-translate-y-1/2">
             <span className="">or</span>
@@ -180,9 +181,9 @@ export default function Signupform() {
         <div className="flex justify-center">
          <button disabled={isSubmitting} type="submit" className="rounded-xl w-10/12 disabled:cursor-not-allowed bg-green-600 text-white py-3 space-x-2 hover:bg-green-800 transition-colors duration-200 cursor-pointer">
             {isSubmitting?<>
-            <FontAwesomeIcon icon={faSpinner} spin />
+            <FontAwesomeIcon icon={faSpinner as IconProp} spin />
             <span>Creating Account</span>
-            </>:<><FontAwesomeIcon icon={faUserPlus} />
+            </>:<><FontAwesomeIcon icon={faUserPlus as IconProp} />
             <span>Create My Account</span></>}
         </button>
         </div>
