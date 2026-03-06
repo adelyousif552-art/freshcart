@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export default function Slider() {
   return <>
@@ -113,10 +114,10 @@ export default function Slider() {
 
   </Swiper>
   <div className="previous cursor-pointer w-9 h-9 bg-white text-green-600 rounded-full z-10  flex items-center justify-center absolute top-1/2 -translate-y-1/2">
-    <FontAwesomeIcon icon={faChevronLeft}/>
+    <FontAwesomeIcon icon={faChevronLeft as IconProp}/>
   </div>
    <div className="next w-9 h-9 cursor-pointer bg-white text-green-600 rounded-full z-10  flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 ">
-    <FontAwesomeIcon icon={faChevronRight}/>
+    <FontAwesomeIcon icon={faChevronRight as IconProp}/>
   </div>
   
   </section>

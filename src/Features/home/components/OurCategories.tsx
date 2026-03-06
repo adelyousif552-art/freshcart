@@ -1,5 +1,6 @@
 import { getallcategories } from "@/Features/Categories/server/categories.server"
 import { Category } from "@/Features/Categories/types/categoriestypes"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
@@ -15,7 +16,7 @@ export default async function OurCategories() {
         <h1 className="font-bold text-4xl     px-3 before:w-2 before:h-10 before:bg-green-600 before:absolute relative before:left-0 ">Shop By <span className="text-green-600">Category</span></h1>
         <Link href={'/allcategories'} className="text-green-600  flex items-center hover:text-green-800 transition-colors duration-200">
         <span>View All Categories</span>
-        <FontAwesomeIcon icon={faArrowRight}/>
+        <FontAwesomeIcon icon={faArrowRight as IconProp}/>
         </Link>
     </div>
     <div className="cards my-6 grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2  space-x-3 space-y-3">
