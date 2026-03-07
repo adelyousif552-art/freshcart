@@ -1,5 +1,4 @@
-import { clear } from 'console';
-import { CartProduct, CartResponse } from './../types/carttypes';
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product, ProductsResponse } from '../types/wishlisttypes';
 export interface wishstate{
