@@ -1,4 +1,4 @@
-// Subcategory
+
 export interface Subcategory {
   _id: string;
   name: string;
@@ -6,7 +6,6 @@ export interface Subcategory {
   category: string;
 }
 
-// Category
 export interface Category {
   _id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface Category {
   image: string;
 }
 
-// Brand
 export interface Brand {
   _id: string;
   name: string;
@@ -22,7 +20,7 @@ export interface Brand {
   image: string;
 }
 
-// Product Details
+
 export interface Product {
   _id: string;
   title: string;
